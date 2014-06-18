@@ -1,8 +1,8 @@
 #!/bin/bash
 
+gateway="unknown"
 # get current routing device
 device=$(ip r | grep default | awk '{ print $NF }')
-gateway="unknown"
 
 if [ "$device" = "tun0" ]; then
     # we are on VPN, further checks needed...
